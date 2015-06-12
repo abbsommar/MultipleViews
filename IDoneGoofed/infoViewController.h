@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @class infoViewController;
 
@@ -17,7 +19,14 @@
 @end
 
 //
-@interface infoViewController : UIViewController
+@interface infoViewController : UIViewController<CLLocationManagerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
+@property (weak, nonatomic) IBOutlet UILabel *signalStrengthLbl;
+@property (weak, nonatomic) IBOutlet UILabel *beaconLbl;
+@property (weak, nonatomic) IBOutlet UILabel *beaconLabel;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+
 
 @property (weak, nonatomic) id<infoViewControllerDelegate> delegate;
 

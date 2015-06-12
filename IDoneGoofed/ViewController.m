@@ -26,6 +26,8 @@
     infoVC.delegate = self;
     
     [self presentViewController:infoVC animated:YES completion:nil];
+    
+    
 }
 
 -(void) infoViewContreollerDidFinish:(infoViewController *)infoVC{

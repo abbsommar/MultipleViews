@@ -17,6 +17,11 @@
 		1F8F9C1C1B2B2D3600E68195 /* IDoneGoofedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F9C1B1B2B2D3600E68195 /* IDoneGoofedTests.m */; };
 		1F8F9C281B2B2D6400E68195 /* infoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F9C261B2B2D6400E68195 /* infoViewController.m */; };
 		1F8F9C291B2B2D6400E68195 /* infoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F9C271B2B2D6400E68195 /* infoViewController.xib */; };
+		1F8F9C2B1B2B32C400E68195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F9C2A1B2B32C400E68195 /* Foundation.framework */; };
+		1F8F9C2D1B2B32C900E68195 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F9C2C1B2B32C900E68195 /* UIKit.framework */; };
+		1F8F9C2F1B2B32D600E68195 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F9C2E1B2B32D600E68195 /* CoreGraphics.framework */; };
+		1F8F9C311B2B32E000E68195 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F9C301B2B32E000E68195 /* SystemConfiguration.framework */; };
+		1F8F9C351B2B330F00E68195 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		1F8F9C251B2B2D6400E68195 /* infoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoViewController.h; sourceTree = "<group>"; };
 		1F8F9C261B2B2D6400E68195 /* infoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoViewController.m; sourceTree = "<group>"; };
 		1F8F9C271B2B2D6400E68195 /* infoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoViewController.xib; sourceTree = "<group>"; };
+		1F8F9C2A1B2B32C400E68195 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1F8F9C2C1B2B32C900E68195 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F8F9C2E1B2B32D600E68195 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F8F9C301B2B32E000E68195 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8F9C311B2B32E000E68195 /* SystemConfiguration.framework in Frameworks */,
+				1F8F9C351B2B330F00E68195 /* EstimoteSDK.framework in Frameworks */,
+				1F8F9C2F1B2B32D600E68195 /* CoreGraphics.framework in Frameworks */,
+				1F8F9C2D1B2B32C900E68195 /* UIKit.framework in Frameworks */,
+				1F8F9C2B1B2B32C400E68195 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +85,11 @@
 		1F8F9BF01B2B2D3600E68195 = {
 			isa = PBXGroup;
 			children = (
+				1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */,
+				1F8F9C301B2B32E000E68195 /* SystemConfiguration.framework */,
+				1F8F9C2E1B2B32D600E68195 /* CoreGraphics.framework */,
+				1F8F9C2C1B2B32C900E68195 /* UIKit.framework */,
+				1F8F9C2A1B2B32C400E68195 /* Foundation.framework */,
 				1F8F9BFB1B2B2D3600E68195 /* IDoneGoofed */,
 				1F8F9C181B2B2D3600E68195 /* IDoneGoofedTests */,
 				1F8F9BFA1B2B2D3600E68195 /* Products */,
@@ -361,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IDoneGoofed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +395,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IDoneGoofed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
