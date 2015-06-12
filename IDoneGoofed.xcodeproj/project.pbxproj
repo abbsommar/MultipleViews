@@ -15,6 +15,8 @@
 		1F8F9C0D1B2B2D3600E68195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F9C0C1B2B2D3600E68195 /* Images.xcassets */; };
 		1F8F9C101B2B2D3600E68195 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F9C0E1B2B2D3600E68195 /* LaunchScreen.xib */; };
 		1F8F9C1C1B2B2D3600E68195 /* IDoneGoofedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F9C1B1B2B2D3600E68195 /* IDoneGoofedTests.m */; };
+		1F8F9C281B2B2D6400E68195 /* infoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F9C261B2B2D6400E68195 /* infoViewController.m */; };
+		1F8F9C291B2B2D6400E68195 /* infoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8F9C271B2B2D6400E68195 /* infoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		1F8F9C151B2B2D3600E68195 /* IDoneGoofedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDoneGoofedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8F9C1A1B2B2D3600E68195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F8F9C1B1B2B2D3600E68195 /* IDoneGoofedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDoneGoofedTests.m; sourceTree = "<group>"; };
+		1F8F9C251B2B2D6400E68195 /* infoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoViewController.h; sourceTree = "<group>"; };
+		1F8F9C261B2B2D6400E68195 /* infoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoViewController.m; sourceTree = "<group>"; };
+		1F8F9C271B2B2D6400E68195 /* infoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,9 @@
 				1F8F9C0E1B2B2D3600E68195 /* LaunchScreen.xib */,
 				1F8F9C031B2B2D3600E68195 /* IDoneGoofed.xcdatamodeld */,
 				1F8F9BFC1B2B2D3600E68195 /* Supporting Files */,
+				1F8F9C251B2B2D6400E68195 /* infoViewController.h */,
+				1F8F9C261B2B2D6400E68195 /* infoViewController.m */,
+				1F8F9C271B2B2D6400E68195 /* infoViewController.xib */,
 			);
 			path = IDoneGoofed;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 			files = (
 				1F8F9C0B1B2B2D3600E68195 /* Main.storyboard in Resources */,
 				1F8F9C101B2B2D3600E68195 /* LaunchScreen.xib in Resources */,
+				1F8F9C291B2B2D6400E68195 /* infoViewController.xib in Resources */,
 				1F8F9C0D1B2B2D3600E68195 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +234,7 @@
 				1F8F9C021B2B2D3600E68195 /* AppDelegate.m in Sources */,
 				1F8F9C051B2B2D3600E68195 /* IDoneGoofed.xcdatamodeld in Sources */,
 				1F8F9C081B2B2D3600E68195 /* ViewController.m in Sources */,
+				1F8F9C281B2B2D6400E68195 /* infoViewController.m in Sources */,
 				1F8F9BFF1B2B2D3600E68195 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

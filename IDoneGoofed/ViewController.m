@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "infoViewController.h"
 
-@interface ViewController ()
+
+@interface ViewController () <infoViewControllerDelegate>
 
 @end
 
@@ -17,6 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)showInfoView:(id)sender {
+    infoViewController *infoVC = [[infoViewController alloc]init];
+    
+    infoVC.delegate = self;
+    
+    [self presentViewController:infoVC animated:YES completion:nil];
+}
+
+-(void) infoViewContreollerDidFinish:(infoViewController *)infoVC{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
