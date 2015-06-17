@@ -8,13 +8,13 @@
 
 #import "ViewController.h"
 #import "infoViewController.h"
-#import </Users/Maccan/Documents/Developer/IDoneGoofed/EstimoteSDK.framework/Headers/ESTBeaconManager.h>
+#import "demoViewController.h"
 
 
 
 
-@interface ViewController () <infoViewControllerDelegate>
-@property (nonatomic, strong) ESTBeaconManager *beaconManager;
+@interface ViewController ()
+<infoViewControllerDelegate, demoViewControllerDelegate>
 @end
 
 @implementation ViewController
@@ -25,6 +25,7 @@
 
     
 }
+//Switch screen to info and stats view
 - (IBAction)showInfoView:(id)sender {
     infoViewController *infoVC = [[infoViewController alloc]init];
     
@@ -35,10 +36,29 @@
     
 }
 
+- (IBAction)shoDemoView:(id)sender {
+    
+    demoViewController *demoVC = [[demoViewController alloc]init];
+    
+    demoVC.delegate = self;
+    
+    [self presentViewController:demoVC animated:YES completion:nil];
+    
+}
+
+
+
 -(void) infoViewContreollerDidFinish:(infoViewController *)infoVC{
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(void) demoViewControllerDidFinish:(demoViewController *)demoVC{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

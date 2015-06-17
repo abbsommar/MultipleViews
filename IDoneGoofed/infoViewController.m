@@ -130,6 +130,7 @@
         if([region.identifier isEqualToString:@"regionYes"] &&  [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
         {
             NSLog(@"Yes!");
+            self.view.backgroundColor = [UIColor orangeColor];
             beaconLbl.text = [NSString stringWithFormat:@"Yes!"];
             beaconLbl.textColor = [UIColor greenColor];
         }
@@ -139,16 +140,16 @@
             beaconLbl.text = [NSString stringWithFormat:@"No!"];
             beaconLbl.textColor = [UIColor redColor];
         }
-        else
+        else{
             beaconLbl.text = [NSString stringWithFormat:@"None!"];
-        
-    }
-    else
-    {
+        self.view.backgroundColor = [UIColor cyanColor];
+        NSLog(@"none");
         self.statusLbl.text = [NSString stringWithFormat:@"Hittar inte alla beacons."];
         self.signalStrengthLbl.text = [NSString stringWithFormat:@"Hittar inte alla beacons."];
+        
     }
-    
+}
+
 }
 
 -(NSString *)textForProximity:(CLProximity)proximity
