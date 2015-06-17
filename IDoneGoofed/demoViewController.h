@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <CoreLocation/CoreLocation.h>
+
 @class demoViewController;
 
 @protocol demoViewControllerDelegate <NSObject>
@@ -15,7 +17,9 @@
 
 @end
 
-@interface demoViewController : UIViewController
+@interface demoViewController : UIViewController<CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 
 

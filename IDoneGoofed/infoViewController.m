@@ -29,16 +29,13 @@
     //Sends you back to startscreen
     [self.delegate infoViewContreollerDidFinish:self];
     
-   
-    
-    
 }
 //
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _locationManager = [[CLLocationManager alloc]init];
-    _locationManager.delegate = self;
+    //_locationManager = [[CLLocationManager alloc]init];
+    //_locationManager.delegate = self;
     self.beaconLabel.text = @"";
     //Create your UUID
     NSUUID *uuidYes = [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
@@ -130,7 +127,7 @@
         if([region.identifier isEqualToString:@"regionYes"] &&  [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
         {
             NSLog(@"Yes!");
-            self.view.backgroundColor = [UIColor orangeColor];
+            
             beaconLbl.text = [NSString stringWithFormat:@"Yes!"];
             beaconLbl.textColor = [UIColor greenColor];
         }
@@ -140,16 +137,16 @@
             beaconLbl.text = [NSString stringWithFormat:@"No!"];
             beaconLbl.textColor = [UIColor redColor];
         }
-        else{
+        else
             beaconLbl.text = [NSString stringWithFormat:@"None!"];
-        self.view.backgroundColor = [UIColor cyanColor];
-        NSLog(@"none");
-        self.statusLbl.text = [NSString stringWithFormat:@"Hittar inte alla beacons."];
-        self.signalStrengthLbl.text = [NSString stringWithFormat:@"Hittar inte alla beacons."];
         
     }
-}
-
+    else
+    {
+        self.statusLbl.text = [NSString stringWithFormat:@"Hittar inte alla beacons."];
+        self.signalStrengthLbl.text = [NSString stringWithFormat:@"Hittar inte alla beacons."];
+    }
+    
 }
 
 -(NSString *)textForProximity:(CLProximity)proximity
