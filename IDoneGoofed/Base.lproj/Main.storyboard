@@ -18,15 +18,24 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-I1-JMI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="DemoView">
+                                <state key="normal" title="Automatic Demo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="141" width="111" height="30"/>
+                                    <rect key="frame" x="16" y="103" width="115" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="shoDemoView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GzZ-Va-RdH"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBI-UE-V4P">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Chose Avalible Demos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="70" width="155" height="30"/>
+                                </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAx-HK-0P0">
                                 <rect key="frame" x="264" y="263" width="46" height="30"/>
@@ -34,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="76" width="80" height="30"/>
+                                    <rect key="frame" x="8" y="141" width="47" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="showInfoView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H0e-Vi-kho"/>
@@ -45,11 +54,13 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eqD-I1-JMI"/>
+                                <exclude reference="yBI-UE-V4P"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="eqD-I1-JMI"/>
+                                <include reference="yBI-UE-V4P"/>
                             </mask>
                         </variation>
                     </view>

@@ -6,7 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="demoViewController">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="Ut6-lg-wHI"/>
+                <outlet property="demo" destination="OQJ-yr-LUa" id="O6n-bx-iq2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="aPR-Tx-Sbg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,21 +24,34 @@
                         <rect key="frame" x="8" y="18" width="46" height="30"/>
                     </variation>
                     <connections>
-                        <action selector="returnToMain:" destination="-1" eventType="touchUpInside" id="Cae-xo-fNE"/>
+                        <action selector="returnToMain:" destination="-1" eventType="touchUpInside" id="KXp-Nl-5qM"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQJ-yr-LUa">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.ihsdajodasjasddasjkljkdsakjldsajkldsajkldsajkldsajkldasjkldjskaljkldsakjldsakjldsajkldsajklsdajklsjdkljkldsajkldsajklsdakjlsdaasnkasdnkldasnkdsanklsnkadlnsdkalnkldasnkldsankdsankldsankldsanklnkldsankdsankldsanlkdsankldsanklnkldsankldsankldsankldsankldsankldsankldsankldnksalknldsankldsankdsankldsankdnskalndksankadslnkdaslnkdsankdsalnkdsalkndsanklnkdasnlkdasnkdasnlkdasnkldasnkladsnkldnsaklnkdlasknsadknldaslkndsalkndasnkldasnlknlkasdnkdsankldsalknsdankldsaknnksdanklsdanklasdnklsdankldsanknkldsankldsankldsankldsankldsaknldsnkalnkldsankldsankldsaknldsanklnksdalnklsdankldsankldsaknlkdnaslkndlasknldsaknlasdknldasknldsaknlknadlskndasnkladskndasknldasknnkadsdas</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="8" y="234" width="384" height="401"/>
+                    </variation>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="gRN-9p-8Qj"/>
+                    <exclude reference="OQJ-yr-LUa"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="gRN-9p-8Qj"/>
+                    <include reference="OQJ-yr-LUa"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="79" y="740"/>
         </view>
     </objects>
 </document>

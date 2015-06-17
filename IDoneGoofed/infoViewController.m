@@ -38,6 +38,8 @@
     //_locationManager.delegate = self;
     self.beaconLabel.text = @"";
     //Create your UUID
+    
+    //Change from no/yes to suitable names!!
     NSUUID *uuidYes = [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
     NSUUID *uuidNo = [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
     
@@ -116,9 +118,14 @@
 }
 
 
+//ANDREAS ÄNDRAR:
+// Skriv ut en lista så att alla beacons finns med utan att använda en "else if" sats
+//Välja en beacon
+
 -(void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    if (beacons.count > 0) {
+    if (beacons.count > 0)
+    {
         CLBeacon *firstBeacon = [beacons firstObject];
         self.beaconLabel.text = [self textForProximity:firstBeacon.proximity];
         self.statusLbl.text = [NSString stringWithFormat:@"Status: %@", [self textForProximity:firstBeacon.proximity]];
@@ -126,20 +133,21 @@
         
         if([region.identifier isEqualToString:@"regionYes"] &&  [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
         {
-            NSLog(@"Yes!");
+            NSLog(@"Blueberry Pie!");
             
-            beaconLbl.text = [NSString stringWithFormat:@"Yes!"];
+            beaconLbl.text = [NSString stringWithFormat:@"Blueberry Pie!"];
             beaconLbl.textColor = [UIColor greenColor];
         }
-        else if([region.identifier isEqualToString:@"regionNo"] && [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
+        if([region.identifier isEqualToString:@"regionNo"] && [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
         {
-            NSLog(@"No!");
-            beaconLbl.text = [NSString stringWithFormat:@"No!"];
+            NSLog(@"Icy Marshmallow!");
+            beaconLbl.text = [NSString stringWithFormat:@"Icy Marshmallow!"];
             beaconLbl.textColor = [UIColor redColor];
         }
         else
+        {
             beaconLbl.text = [NSString stringWithFormat:@"None!"];
-        
+        }
     }
     else
     {

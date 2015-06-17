@@ -24,6 +24,7 @@
 
 
 @implementation demoViewController
+@synthesize demo;
 
 - (IBAction)returnToMain:(id)sender {
     //Send back to main
@@ -128,21 +129,20 @@
         if([region.identifier isEqualToString:@"regionYes"] &&  [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
         {
             NSLog(@"BlueBerryPie");
-            self.view.backgroundColor = [UIColor purpleColor];
+            
+            demo.text = [NSString stringWithFormat:@"Hello! my name is blueberry pie and i'll be your host for the evening, you can try and scrolle me but im not reallt that creative enought for you to be abele to cause then I would have to write soo much and i dont really feel like that :P "];
+            
+            
+            
 
         }
-        if([region.identifier isEqualToString:@"regionNo"] && [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
+       else if([region.identifier isEqualToString:@"regionNo"] && [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy < 1.0f)
         {
-            self.view.backgroundColor = [UIColor cyanColor];
+            demo.text = [NSString stringWithFormat:@"Hi, im icy marshmallor, im so icy ill bite your fingers of :D"];
             NSLog(@"Icy Marshmallow!");
 
         }
-        else if (([region.identifier isEqualToString:@"regionNo"] && [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"]) && firstBeacon.accuracy > 1.0f && ([region.identifier isEqualToString:@"regionYes"] &&  [[self textForProximity:firstBeacon.proximity] isEqualToString:@"Immediate"] && firstBeacon.accuracy > 1.0f)){
-            //beaconLbl.text = [NSString stringWithFormat:@"None!"];
-            NSLog(@"none");
-            self.view.backgroundColor = [UIColor blackColor];
-            
-        }
+
     }
     
 }

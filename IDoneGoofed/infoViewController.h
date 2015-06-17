@@ -18,7 +18,7 @@
 
 @end
 
-//
+
 @interface infoViewController : UIViewController<CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 @property (weak, nonatomic) IBOutlet UILabel *signalStrengthLbl;

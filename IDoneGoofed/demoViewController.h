@@ -20,9 +20,13 @@
 @interface demoViewController : UIViewController<CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UITextView *demo;
+
+
 
 
 
 @property (weak, nonatomic) id<demoViewControllerDelegate> delegate;
+
 
 @end
