@@ -13,7 +13,7 @@
 
 
 
-@interface infoViewController ()
+@interface infoViewController () <ESTBeaconManagerDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) CLBeacon *beacon;
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) CLBeaconRegion *beaconRegionYes;
@@ -21,7 +21,7 @@
 @property (nonatomic, strong) CLBeaconRegion *region;
 @end
 
-@implementation infoViewController
+@implementation infoViewController  
 
 @synthesize statusLbl, signalStrengthLbl, beaconLbl;
 
@@ -29,6 +29,14 @@
     //Sends you back to startscreen
     [self.delegate infoViewContreollerDidFinish:self];
     
+   
+    
+    
+}
+//
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     _locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
     self.beaconLabel.text = @"";
@@ -74,13 +82,6 @@
     
     //MUST have for IOS8
     [self.beaconManager requestAlwaysAuthorization];
-    
-    
-}
-//
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 //check for region failure

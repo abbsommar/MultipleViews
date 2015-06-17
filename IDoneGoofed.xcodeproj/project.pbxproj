@@ -56,7 +56,8 @@
 		1F8F9C2C1B2B32C900E68195 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F8F9C2E1B2B32D600E68195 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1F8F9C301B2B32E000E68195 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../EstimoteSDK.framework; sourceTree = "<group>"; };
+		1F8F9C361B31410500E68195 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +86,7 @@
 		1F8F9BF01B2B2D3600E68195 = {
 			isa = PBXGroup;
 			children = (
-				1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */,
-				1F8F9C301B2B32E000E68195 /* SystemConfiguration.framework */,
-				1F8F9C2E1B2B32D600E68195 /* CoreGraphics.framework */,
-				1F8F9C2C1B2B32C900E68195 /* UIKit.framework */,
-				1F8F9C2A1B2B32C400E68195 /* Foundation.framework */,
+				1F8F9C361B31410500E68195 /* Default-568h@2x.png */,
 				1F8F9BFB1B2B2D3600E68195 /* IDoneGoofed */,
 				1F8F9C181B2B2D3600E68195 /* IDoneGoofedTests */,
 				1F8F9BFA1B2B2D3600E68195 /* Products */,
@@ -127,6 +124,11 @@
 		1F8F9BFC1B2B2D3600E68195 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F8F9C341B2B330F00E68195 /* EstimoteSDK.framework */,
+				1F8F9C301B2B32E000E68195 /* SystemConfiguration.framework */,
+				1F8F9C2E1B2B32D600E68195 /* CoreGraphics.framework */,
+				1F8F9C2C1B2B32C900E68195 /* UIKit.framework */,
+				1F8F9C2A1B2B32C400E68195 /* Foundation.framework */,
 				1F8F9BFD1B2B2D3600E68195 /* Info.plist */,
 				1F8F9BFE1B2B2D3600E68195 /* main.m */,
 			);

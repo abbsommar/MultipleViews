@@ -8,10 +8,13 @@
 
 #import "ViewController.h"
 #import "infoViewController.h"
+#import </Users/Maccan/Documents/Developer/IDoneGoofed/EstimoteSDK.framework/Headers/ESTBeaconManager.h>
+
+
 
 
 @interface ViewController () <infoViewControllerDelegate>
-
+@property (nonatomic, strong) ESTBeaconManager *beaconManager;
 @end
 
 @implementation ViewController
@@ -19,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    
 }
 - (IBAction)showInfoView:(id)sender {
     infoViewController *infoVC = [[infoViewController alloc]init];
@@ -37,7 +42,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    //aaaaa Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be recreated.
 }
 
 @end
